@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Catalogo.SiteMaster" %>
+
+<!DOCTYPE html>
+<script languaje ="C#" runat="server">
+    void botonComprar(Object fuente, EventArgs argumento)
+    {
+        enlace.Visible = true;
+        enlace.HRef = "https://www.falabella.com.pe/falabella-pe";
+    }
+</script>
+<html lang="es">
+<body id ="cuerpo" runat="server">
+    <div style="background-color: #FFCC00">
+        <h1> Tienda Electra</h1>
+        <h2> Catálogo</h2>
+    </div>
+    <form id="WebForm" method="post" runat="server">
+        <select id="Lista" name="lista" runat="server">
+            <option value="licuadora" selected>Licuadora</option>
+            <option value="lavadora">Lavadora</option>
+            <option value="televisor">Televisor</option>
+            <option value="aspiradora">Aspiradora</option>
+            <option value="plancha">Plancha</option>
+            <option value="telefono">Telefono</option>
+        </select>
+        <input type="button" runat="server" id="boton" value="Elegir" onserverclick="elegir_elec"/>
+        <br/><br/>
+        <asp:Label ID="Label1" runat="server" Text="Codigo: "></asp:Label>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <asp:Label ID="Label2" runat="server" Text="Nombre: "></asp:Label>
+           <br/><br/>
+        <asp:Label ID="Label3" runat="server" Text="Descripcion: "></asp:Label>
+           <br/><br/>
+        <asp:Label ID="Label4" runat="server" Text="Marca: "></asp:Label>
+           <br/><br/>
+        <asp:Label ID="Label5" runat="server" Text="Precio: "></asp:Label>
+        <br/><br/>
+        <img id="Grafico" runat="server" />
+        <br/><br/>
+        <input type="button" runat="server" id="BotonCompra" value="Comprar" onserverclick="botonComprar" />
+        <br/><br/>
+        <a href="ejemplo1.html" id="enlace" runat="server">Comprar aqui</a>
+
+    </form>
+</body>
+</html>

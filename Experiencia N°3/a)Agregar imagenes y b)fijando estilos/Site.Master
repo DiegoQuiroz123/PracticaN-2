@@ -1,0 +1,33 @@
+﻿/**********************
+* CODIGO        	   	: Site.Master
+* AUTOR                	: Gabriel Tuco Casquino	 
+**********************/
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Pract2_exp3.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="es">
+    <script languaje="C#" runat="server">
+        void Pulsado(Object sender, EventArgs args)
+        {
+            etiqueta.InnerText = lista.Value;
+        }
+    </script>
+<head runat="server">
+    <title><%: Page.Title %> - Script ASP.NET</title>
+</head>
+<body>
+     <form id="WebForm" method="post" runat="server">
+         <h1>Seleccionar película</h1>
+         <select id="lista" runat="server">
+              <option selected>La Vida es bella</option>
+              <option>Zootopia</option>
+              <option>Kungfu Panda</option>
+              <option>2001</option>
+     </select>
+     <input type="button" id="boton" runat="server" value="Seleccionar" onserverclick="Pulsado" />
+     <br />
+     <div id="etiqueta" runat="server"></div>
+   </form>
+</body>
+</html>

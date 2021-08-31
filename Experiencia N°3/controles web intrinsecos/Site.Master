@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ControlesWebIn.SiteMaster" %>
+
+<!DOCTYPE html>
+<script languaje ="C#" runat="server">
+ void Pulsado(Object sender, EventArgs argumentos)
+ {
+ DateTime ahora;
+ ahora = DateTime.Now;
+ etiqueta.Text = "El momento es: " + ahora.ToString();
+ }
+</script>
+<html lang="es">
+<body>
+    <form id="WebForm" method="post" runat="server">
+        <asp:button id="boton" onClick="Pulsado" runat="server" Text="Seleccionar" /> <br />
+        <asp:Label ID="etiqueta" runat="server" />
+    </form>
+</body>
+</html>

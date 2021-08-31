@@ -1,0 +1,19 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Holamundo.SiteMaster" %>
+
+<!DOCTYPE html>
+    <script languaje="C#" runat="server">
+     void BotonPulsado(Object fuente, EventArgs argumento)
+     {
+        enlace.HRef = "HolaMundo.html";
+     }
+    </script>
+<html>
+<body>
+    <form id="formulario" method="post" runat="server">
+        <a href="ejemplo1.html" id="enlace" runat="server">Pulsar enlace</a><br/>
+        <button runat="server" id="boton" onserverclick="BotonPulsado">
+            <b>Pulsa</b>
+        </button>
+    </form>
+</body>
+</html>
